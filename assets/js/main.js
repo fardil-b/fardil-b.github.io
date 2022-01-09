@@ -71,6 +71,17 @@
 					visibleClass: 'navPanel-visible'
 				});
 
+				var nav = document.getElementById('nav');
+				window.onscroll = function() {
+					if(window.pageYOffset > 100) {
+					nav.style.position = "fixed";
+					nav.style.top = 0;
+					}else{
+						nav.style.position = "absolute";
+						nav.style.top = 100;
+					}
+				}
+
 	// Parallax.
 	// Disabled on IE (choppy scrolling) and mobile platforms (poor performance).
 		if (browser.name == 'ie'
